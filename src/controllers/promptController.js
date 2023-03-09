@@ -10,7 +10,8 @@ module.exports = {
       const response = await openaiAI.createCompletion(
         openai.textCompletion(inputModel)
       );
-      return response.status(200).json({
+
+      return res.status(200).json({
         sucess: true,
         data: response.data.choices[0].text,
       });
